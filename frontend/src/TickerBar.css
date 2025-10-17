@@ -1,0 +1,59 @@
+.ticker-bar {
+  width: 100%;
+  overflow: hidden;
+  background-color: #111827;
+  border-top: 1px solid #1e293b;
+  border-bottom: 1px solid #1e293b;
+  display: flex;
+  justify-content: center; /* center the ticker track horizontally */
+  align-items: center;     /* center vertically */
+  white-space: nowrap;
+  padding: 12px 0;         /* slightly smaller height */
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  animation: scrollTicker 150s linear infinite; /* faster than 240s */
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;   /* slightly smaller spacing */
+  padding: 0 50px;    /* slightly smaller spacing between tickers */
+  font-size: 1.6rem;  /* slightly smaller font */
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.ticker-logo {
+  width: 35px;        /* slightly smaller logo */
+  height: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ticker-symbol {
+  margin-right: 6px;
+  color: #ffffff;
+}
+
+.ticker-change.up {
+  color: #22c55e;
+}
+
+.ticker-change.down {
+  color: #ef4444;
+}
+
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
